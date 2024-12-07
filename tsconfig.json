@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES6",                     // ES6으로 트랜스파일
+    "module": "ESNext",                  // 모듈 시스템 설정
+    "moduleResolution": "node",          // 노드 방식으로 모듈 해석
+    "jsx": "react",                      // JSX 사용
+    "esModuleInterop": true,             // ES 모듈 호환성
+    "skipLibCheck": true,                // 라이브러리 체크 생략
+    "strict": true,                      // 모든 엄격한 타입 검사를 활성화
+    "noImplicitAny": true                // 암묵적 'any' 타입 금지
+  },
+  "include": ["src/**/*"],               // 컴파일할 파일 지정
+  "exclude": ["node_modules", "dist"]     // 제외할 파일 및 디렉토리
+}
