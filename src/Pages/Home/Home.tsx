@@ -1,14 +1,15 @@
-import React from "react";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
-const Home: React.FC = () => {
-  return (
-    <>
-      <title>홈페이지</title>
-      <h1>이것은 홈페이지</h1>
-      <p>I hate Coding</p>
-      <a href="/random-number">랜덤 숫자 생성</a>
-    </>
-  );
+const Home = () => {
+	return (
+		<>
+			<ul>
+				<Link to="/Leaderboard"><li>리더보드</li></Link>
+				<Link to="/AddRank"><li>랭킹 추가</li></Link>
+			</ul>
+		</>
+	);
 };
 
 export default Home;

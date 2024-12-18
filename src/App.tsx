@@ -1,16 +1,30 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import { ThemeProvider } from "styled-components";
+import { darkTheme } from "./theme/theme";
+import { GlobalStyle } from "./theme/GlobalStyle";
+
 import Home from "./Pages/Home/Home";
-import RandomNumberPage from "./Pages/RandomNumber/RandomNumber";
+import Leaderboard from "./Pages/Leaderboard/LeaderboardPage";
+import Test from "./Pages/RankingUpdate/RankingUpdate";
+import NotFound from "./Pages/NotFound";
 
 const App: React.FC = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/random-number" element={<RandomNumberPage />} />
-      </Routes>
-    </Router>
+    <ThemeProvider theme={darkTheme}>
+      <GlobalStyle />
+      <div>
+        <BrowserRouter>
+			    <Routes>
+			    <Route path="/" element={<Home />}></Route>
+			    <Route path="/Leaderboard" element={<Leaderboard />}></Route>
+			    <Route path="/AddRank" element={<Test />}></Route>
+          <Route path="*" element={<NotFound />}></Route>
+			  </Routes>
+			</BrowserRouter>
+    </div>
+    </ThemeProvider>
   );
 };
 
