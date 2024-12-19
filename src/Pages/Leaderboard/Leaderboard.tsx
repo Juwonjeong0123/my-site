@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { getRankingsFromLocalStorage, updateRankings, RankData } from "../../utils/rankingUtils"; // 유틸 함수 임포트
+import { getRankingsFromLocalStorage, updateRankings, clearLocalStorage, RankData } from "../../utils/rankingUtils"; // 유틸 함수 임포트
 import {
-  Button,
+  _Button,
+  __Button,
   Table,
   TableContainer,
   Title,
@@ -49,9 +50,18 @@ const Leaderboard: React.FC = () => {
     alert("랭킹이 업데이트되었습니다.");
   };
 
+  const handleClearCache = () => {
+    if (window.confirm("정말로 모든 캐시를 삭제하시겠습니까?")) {
+      clearLocalStorage();
+      setRankings([]); // 화면에서도 데이터 초기화
+      alert("캐시가 초기화되었습니다.");
+    }
+  };
+
   return (
     <>
-      <Button onClick={addRanking}>랭킹 추가</Button>
+      <_Button onClick={addRanking}>랭킹 추가</_Button>
+      <__Button onClick={handleClearCache}>캐시 삭제</__Button>
       <Title>카지노 순위</Title>
       <TableContainer>
         <Table>

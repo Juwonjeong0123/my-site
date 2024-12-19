@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Button = styled.button`
+export const _Button = styled.button`
   width: 120px;
   height: 40px;
   background-color: #444444;
@@ -8,7 +8,20 @@ export const Button = styled.button`
   border:none;
   border-radius:10px;
   position: absolute;
-  left: 83%;
+  left: 79%;
+  top: 10%;
+  font-size: 20px;
+`;
+
+export const __Button = styled.button`
+  width: 120px;
+  height: 40px;
+  background-color: #444444;
+  color: #fff;
+  border:none;
+  border-radius:10px;
+  position: absolute;
+  left: 87%;
   top: 10%;
   font-size: 20px;
 `;
