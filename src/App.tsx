@@ -6,8 +6,7 @@ import { darkTheme } from "./theme/theme";
 import { GlobalStyle } from "./theme/GlobalStyle";
 
 import Home from "./Pages/Home/Home";
-import Leaderboard from "./Pages/Leaderboard/LeaderboardPage";
-import Test from "./Pages/RankingUpdate/RankingUpdate";
+import Leaderboard from "./Pages/Leaderboard/Leaderboard";
 import NotFound from "./Pages/NotFound";
 
 const App: React.FC = () => {
@@ -19,7 +18,6 @@ const App: React.FC = () => {
 			    <Routes>
 			    <Route path="/" element={<Home />}></Route>
 			    <Route path="/Leaderboard" element={<Leaderboard />}></Route>
-			    <Route path="/AddRank" element={<Test />}></Route>
           <Route path="*" element={<NotFound />}></Route>
 			  </Routes>
 			</BrowserRouter>

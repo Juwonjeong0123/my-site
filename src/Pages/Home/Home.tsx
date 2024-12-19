@@ -6,7 +6,6 @@ const Home = () => {
 		<>
 			<ul>
 				<Link to="/Leaderboard"><li>리더보드</li></Link>
-				<Link to="/AddRank"><li>랭킹 추가</li></Link>
 			</ul>
 		</>
 	);

@@ -1,5 +1,18 @@
 import styled from 'styled-components';
 
+export const Button = styled.button`
+  width: 120px;
+  height: 40px;
+  background-color: #444444;
+  color: #fff;
+  border:none;
+  border-radius:10px;
+  position: absolute;
+  left: 83%;
+  top: 10%;
+  font-size: 20px;
+`;
+
 export const Table = styled.table`
   border-collapse: collapse;
   background-color: #121212; /* 다크 모드 배경색 */
