@@ -6,8 +6,13 @@
     <title>404 Not Found</title>
     <script>
       // GitHub Pages에서 새로고침 시 React 앱으로 경로를 전달
-      const redirectTo = window.location.pathname + window.location.search;
-      window.location.replace(window.location.origin + "/index.html" + redirectTo);
+      const currentUrl = window.location.href;
+
+      // 이미 index.html 경로로 리디렉션된 경우 리디렉션 중단
+      if (!currentUrl.includes("/index.html")) {
+        const redirectTo = window.location.pathname + window.location.search + window.location.hash;
+        window.location.replace(window.location.origin + "/index.html" + redirectTo);
+      }
     </script>
   </head>
   <body>
