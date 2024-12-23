@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>404 Not Found</title>
     <script>
-      // GitHub Pages에서 새로고침 시 React 앱으로 경로를 전달
-      const currentUrl = window.location.href;
+      // GitHub Pages에서 올바른 경로로 리디렉션
+      const currentPath = window.location.pathname;
+      const redirectPath = "/index.html" + currentPath;
 
-      // 이미 index.html 경로로 리디렉션된 경우 리디렉션 중단
-      if (!currentUrl.includes("/index.html")) {
-        const redirectTo = window.location.pathname + window.location.search + window.location.hash;
-        window.location.replace(window.location.origin + "/index.html" + redirectTo);
+      // index.html로 리디렉션 처리 (리디렉션 루프 방지)
+      if (!currentPath.startsWith("/index.html")) {
+        window.location.replace(window.location.origin + redirectPath + window.location.search + window.location.hash);
       }
     </script>
   </head>
