@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://github.com/Juwonjeong0123/my-site",
+  "homepage": "https://juwonjeong0123.site",
   "scripts": {
     "start": "webpack serve --open",
     "build": "webpack",
