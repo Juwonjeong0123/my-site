@@ -7,6 +7,7 @@ import { GlobalStyle } from "./theme/GlobalStyle";
 
 import Home from "./Pages/Home/Home";
 import Leaderboard from "./Pages/Leaderboard/Leaderboard";
+import Aya from "./Pages/Aya/Aya";
 import NotFound from "./Pages/NotFound";
 
 const App: React.FC = () => {
@@ -18,6 +19,7 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/Leaderboard" element={<Leaderboard />}></Route>
+            <Route path="/Aya" element={<Aya />}></Route>
             <Route path="*" element={<NotFound />}></Route>
           </Routes>
         </HashRouter>
